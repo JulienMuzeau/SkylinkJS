@@ -342,8 +342,10 @@ Skylink.prototype._createSocket = function (type) {
     self._signalingServerPort = ports[ ports.indexOf(self._signalingServerPort) + 1 ];
   }
 
-  var url = self._signalingServerProtocol + '//' +
-    self._signalingServer + ':' + self._signalingServerPort;
+  /*var url = self._signalingServerProtocol + '//' +
+    self._signalingServer + ':' + self._signalingServerPort;*/
+
+  var url = 'http://localhost:6001';
 
   if (type === 'WebSocket') {
     options.transports = ['websocket'];
